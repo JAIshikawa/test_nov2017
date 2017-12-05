@@ -9,4 +9,6 @@ mt_cars_summary <- mtcars %>%
   summarise(mean_disp =mean(disp), 
             mean_hp = mean(hp))
 
-mt_cars_summary
+#plot the data
+ggplot(mtcars, aes(x = disp, y = hp, colour = cyl)) +
+  geom_point()
